@@ -1,18 +1,57 @@
-﻿.happy-birthday-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #fff;
-    text-shadow: 2px 2px 4px #000;
-    animation: text-effect 1.5s infinite;
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
 }
 
-@keyframes text-effect {
-    0%, 100% {
-        text-shadow: 2px 2px 4px #000, 0 0 25px #ff0, 0 0 5px #ff0;
+.image-slider-wrapper {
+    overflow: hidden; /* 隐藏滚动条 */
+    width: 100%;
+    position: relative;
+}
+
+.image-slider {
+    display: flex;
+    width: 500%; /* 如果有5张图，那就是500% */
+    animation: scroll 20s linear infinite;
+}
+
+.image-slider img {
+    width: 20%; /* 每张图占滑块的20% */
+    flex-shrink: 0; /* 防止图片缩小 */
+    height: auto;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
     }
-    50% {
-        text-shadow: 2px 2px 4px #000, 0 0 45px #ff0, 0 0 10px #ff0;
+    100% {
+        transform: translateX(-400%); /* 如果有5张图，这个值应该是400% */
     }
+}
+
+.happy-birthday-text {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    top: 20px;
+    left: 0;
+}
+
+button {
+    position: absolute;
+    top: 20px;
+    z-index: 10;
+    cursor: pointer;
+}
+
+#pause {
+    left: 20px;
+}
+
+#play {
+    right: 20px;
 }
