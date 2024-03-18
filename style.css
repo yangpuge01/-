@@ -15,8 +15,8 @@ body, html {
 }
 
 .image-slider img {
-    width: 504px; /* 7 inches wide */
-    height: 672px; /* 7 inches tall */
+    width: 12.7cm; /* 大约5英寸宽 */
+    height: 17.78cm; /* 大约7英寸高 */
    /* object-fit: cover;*/
 }
 
