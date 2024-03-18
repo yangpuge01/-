@@ -28,6 +28,7 @@ body, html {
 .happy-birthday-text {
     position: absolute;
     font-size: 3em;
+    color: red; /* 设置文字颜色为红色 */
     animation: flip 5s infinite;
 }
 
