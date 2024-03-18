@@ -6,33 +6,41 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
-}
-
-.slider-container {
-    width: 100%;
-    height: auto;
-    overflow: hidden;
-    position: relative;
+    background-color: #f0f0f0;
 }
 
 .image-slider {
     display: flex;
-    animation: scroll linear infinite;
-    animation-duration: 20s; /* 控制滚动速度 */
+    animation: slide 30s infinite linear;
 }
 
 .image-slider img {
-    width: 5cm; /* 大约5英寸宽 */
-    height: 7cm; /* 大约7英寸高 */
-    /*object-fit: cover;*/
+    width: 504px; /* 7 inches wide */
+    height: 672px; /* 7 inches tall */
+   /* object-fit: cover;*/
 }
 
-@keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
+@keyframes slide {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-2520px); /* Move left the total width of all images */ }
+}
+
+.happy-birthday-text {
+    position: absolute;
+    font-size: 3em;
+    animation: flip 5s infinite;
+}
+
+@keyframes flip {
+    from { transform: rotateY(0); }
+    to { transform: rotateY(360deg); }
+}
+
+.celestial span {
+    font-size: 2em;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
 }
