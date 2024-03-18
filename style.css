@@ -23,8 +23,8 @@ body, html {
 }
 
 .image-slider img {
-    width: 12.7cm; /* 大约5英寸宽 */
-    height: 17.78cm; /* 大约7英寸高 */
+    width: 5cm; /* 大约5英寸宽 */
+    height: 7cm; /* 大约7英寸高 */
     object-fit: cover;
 }
 
