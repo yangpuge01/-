@@ -25,7 +25,7 @@ body, html {
 .image-slider img {
     width: 5cm; /* 大约5英寸宽 */
     height: 7cm; /* 大约7英寸高 */
-    object-fit: cover;
+    /*object-fit: cover;*/
 }
 
 @keyframes scroll {
